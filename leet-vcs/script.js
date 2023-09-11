@@ -58,7 +58,7 @@ function displayContests(contests) {
         if (contestTitle.includes("Biweekly")) {
             // For biweekly contests
             contestLink = `https://leetcode.com/contest/${contestTitle.toLowerCase().replace(/\s+/g, '-')}/`;
-        }else if (parseInt(contestTitle.split(" ")[2]) <= 57) {
+        } else if (parseInt(contestTitle.split(" ")[2]) <= 57) {
             // For contests 1 to 57
             contestLink = `https://leetcode.com/contest/leetcode-${contestTitle.toLowerCase().replace(/\s+/g, '-')}/`;
         } else {
@@ -91,7 +91,7 @@ function showRandomContest() {
         if (randomContest.contest.title.includes("Biweekly")) {
             // For biweekly contests
             contestLink = `https://leetcode.com/contest/${randomContest.contest.title.toLowerCase().replace(/\s+/g, '-')}/`;
-        }else if (parseInt(randomContest.contest.title.split(" ")[2]) <= 57) {
+        } else if (parseInt(randomContest.contest.title.split(" ")[2]) <= 57) {
             // For contests 1 to 57
             window.open(`https://leetcode.com/contest/leetcode-${randomContest.contest.title.toLowerCase().replace(/\s+/g, '-')}/`, '_blank');
         } else {
