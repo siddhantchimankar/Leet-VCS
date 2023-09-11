@@ -7,9 +7,10 @@
     <title>LeetCode Contest Selector</title>
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Bungee+Shade&family=Press+Start+2P&family=Rubik&display=swap" rel="stylesheet">
-<script src="https://kit.fontawesome.com/86744d9ce3.js" crossorigin="anonymous"></script>
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Bungee+Shade&family=Press+Start+2P&family=Rubik&display=swap"
+        rel="stylesheet">
+    <script src="https://kit.fontawesome.com/86744d9ce3.js" crossorigin="anonymous"></script>
     <style>
         body {
             font-family: 'Arial', sans-serif;
@@ -20,7 +21,7 @@
             height: 100vh;
             margin: 0;
             background: linear-gradient(45deg, #98DDCA, #D5ECC2, #FFD3B4, #FFAAA7);
-            padding-bottom: 90px; 
+            padding-bottom: 90px;
         }
 
         .card {
@@ -88,7 +89,8 @@
         }
 
         .contest-list {
-            display: none; /* Hide by default */
+            display: none;
+            /* Hide by default */
             text-align: left;
             max-height: 300px;
             overflow-y: auto;
@@ -98,7 +100,7 @@
             margin-bottom: 30px;
             background-color: #fff;
             box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-            
+
         }
 
         .contest-list h2 {
@@ -158,14 +160,16 @@
     <div class="card">
         <h1 class="card-title mb-4">LeetVCS</h1>
         <div class="input-group">
-            <input type="text" class="form-control" id="usernameInput" placeholder="Enter your LeetCode username" oninput="saveUsername()">
+            <input type="text" class="form-control" id="usernameInput" placeholder="Enter your LeetCode username"
+                oninput="saveUsername()">
         </div>
         <div class="btn-container">
             <button class="btn btn-primary" onclick="fetchContests()">All Contests</button>
             <button class="btn btn-primary" onclick="fetchUnattendedContests()">Unattended Contests</button>
         </div>
         <div class="contest-list" id="contestList"></div>
-        <button class="btn random-contest-btn" onclick="showRandomContest()" style="display:none;">Random Contest</button>
+        <button class="btn random-contest-btn" onclick="showRandomContest()" style="display:none;">Random
+            Contest</button>
         <div id="randomContest"></div>
     </div>
 
@@ -176,13 +180,13 @@
 
     <footer class="text-center mt-4">
         <p>Made with ❤️ by Siddhant Chimankar</p>
-        <a href="https://github.com/siddhantchimankar">GitHub</a> |
-        <a href="https://www.linkedin.com/in/siddhant-chimankar-8b5b31188/">LinkedIn</a> |
-        <a href="https://leetcode.com/siddhantchimankar/">LeetCode</a> |
-        <a href="https://twitter.com/siddhantapricot">Twitter</a>
+        <a href="https://github.com/siddhantchimankar" target="_blank">GitHub</a> |
+        <a href="https://www.linkedin.com/in/siddhant-chimankar-8b5b31188/" target="_blank">LinkedIn</a> |
+        <a href="https://leetcode.com/siddhantchimankar/" target="_blank">LeetCode</a> |
+        <a href="https://twitter.com/siddhantapricot" target="_blank">Twitter</a>
+
     </footer>
 
 
     <script src="script.js"></script>
 </body>
-

@@ -54,14 +54,18 @@ function displayContests(contests) {
         const contestTitle = contest.contest.title;
         // const contestLink = `https://leetcode.com/contest/${contestTitle.toLowerCase().replace(/\s+/g, '-')}/`;
         let contestLink;
-        
-        if (parseInt(contestTitle.split(" ")[2]) <= 57) {
+
+        if (contestTitle.includes("Biweekly")) {
+            // For biweekly contests
+            contestLink = `https://leetcode.com/contest/${contestTitle.toLowerCase().replace(/\s+/g, '-')}/`;
+        }else if (parseInt(contestTitle.split(" ")[2]) <= 57) {
             // For contests 1 to 57
             contestLink = `https://leetcode.com/contest/leetcode-${contestTitle.toLowerCase().replace(/\s+/g, '-')}/`;
         } else {
             // For contests 58 onwards
             contestLink = `https://leetcode.com/contest/${contestTitle.toLowerCase().replace(/\s+/g, '-')}/`;
         }
+
         const contestElement = document.createElement("div");
         contestElement.innerHTML = `<a href="${contestLink}" target="_blank">${contestTitle}</a>`;
         contestListElement.appendChild(contestElement);
@@ -84,7 +88,10 @@ function showRandomContest() {
     if (remainingContests.length > 0) {
         const randomIndex = Math.floor(Math.random() * remainingContests.length);
         const randomContest = remainingContests[randomIndex];
-        if (parseInt(randomContest.contest.title.split(" ")[2]) <= 57) {
+        if (randomContest.contest.title.includes("Biweekly")) {
+            // For biweekly contests
+            contestLink = `https://leetcode.com/contest/${randomContest.contest.title.toLowerCase().replace(/\s+/g, '-')}/`;
+        }else if (parseInt(randomContest.contest.title.split(" ")[2]) <= 57) {
             // For contests 1 to 57
             window.open(`https://leetcode.com/contest/leetcode-${randomContest.contest.title.toLowerCase().replace(/\s+/g, '-')}/`, '_blank');
         } else {
