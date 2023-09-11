@@ -84,7 +84,14 @@ function showRandomContest() {
     if (remainingContests.length > 0) {
         const randomIndex = Math.floor(Math.random() * remainingContests.length);
         const randomContest = remainingContests[randomIndex];
-        window.open(`https://leetcode.com/contest/${randomContest.contest.title.toLowerCase().replace(/\s+/g, '-')}/`, '_blank');
+        if (parseInt(randomContest.contest.title.split(" ")[2]) <= 57) {
+            // For contests 1 to 57
+            window.open(`https://leetcode.com/contest/leetcode-${randomContest.contest.title.toLowerCase().replace(/\s+/g, '-')}/`, '_blank');
+        } else {
+            // For contests 58 onwards
+            window.open(`https://leetcode.com/contest/${randomContest.contest.title.toLowerCase().replace(/\s+/g, '-')}/`, '_blank');
+        }
+        // window.open(`https://leetcode.com/contest/${randomContest.contest.title.toLowerCase().replace(/\s+/g, '-')}/`, '_blank');
     } else {
         alert("No remaining contests to show.");
     }
