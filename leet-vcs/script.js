@@ -52,7 +52,16 @@ function displayContests(contests) {
 
     contests.forEach(contest => {
         const contestTitle = contest.contest.title;
-        const contestLink = `https://leetcode.com/contest/${contestTitle.toLowerCase().replace(/\s+/g, '-')}/`;
+        // const contestLink = `https://leetcode.com/contest/${contestTitle.toLowerCase().replace(/\s+/g, '-')}/`;
+        let contestLink;
+        
+        if (parseInt(contestTitle.split(" ")[2]) <= 57) {
+            // For contests 1 to 57
+            contestLink = `https://leetcode.com/contest/leetcode-${contestTitle.toLowerCase().replace(/\s+/g, '-')}/`;
+        } else {
+            // For contests 58 onwards
+            contestLink = `https://leetcode.com/contest/${contestTitle.toLowerCase().replace(/\s+/g, '-')}/`;
+        }
         const contestElement = document.createElement("div");
         contestElement.innerHTML = `<a href="${contestLink}" target="_blank">${contestTitle}</a>`;
         contestListElement.appendChild(contestElement);
