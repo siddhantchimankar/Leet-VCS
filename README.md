@@ -1,3 +1,5 @@
+![Leet-VCS](a.png)
+
 # Leet-VCS
 
 This project is a web application that allows users to view their remaining LeetCode contests and randomly open a contest from the list. It fetches contest data from the LeetCode API and displays the contests in a list on the webpage.
